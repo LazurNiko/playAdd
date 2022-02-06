@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 
-test.describe('', () => {
-  test('Main page has all mandatory elements', async ({ page }) => {
+test.describe('Main page has all mandatory elements', () => {
+  test('Navigation menu', async ({ page }) => {
     await page.goto('https://auth0.com');
     await expect(page.locator('nav[role="navigation"]>a>svg')).toHaveAttribute('xmlns', 'http://www.w3.org/2000/svg');
     const list = page.locator('ul[role="menubar"] > li > div > span');
